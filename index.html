@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dynamic Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="main-container">
+        <header class="app-header">
+            <img src="images/logo.png" alt="Quiz App Logo" class="app-logo" />
+            <h1>QuizWiz</h1>
+        </header>
+
+        <div class="login-panel" id="login-panel">
+            <img src="images/logo.png" alt="QuizWiz" style="width:60px; margin-bottom:16px;">
+            <h2>Enter Username</h2>
+            <input type="text" id="username-input" placeholder="Your username" />
+            <button id="login-btn">Start Quiz</button>
+        </div>
+        
+        <div class="quiz-setup hidden" id="quiz-setup">
+            <h2>Quiz Settings</h2>
+            <div class="input-group">
+                <label for="category">Select Subject:</label>
+                <select id="category"></select>
+            </div>
+            <div class="input-group">
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button id="start-btn" class="start-btn">Start Quiz</button>
+            <button id="view-leaderboard-btn" class="start-btn">View Leaderboard</button>
+            <button id="logout-btn" class="start-btn">Logout</button>
+        </div>
+        
+        <div class="quiz-container hidden" id="quiz-container">
+            <div class="status-bar">
+                <div class="status-box" id="question-box">
+                    <span id="question-number">Question: 1/4</span>
+                </div>
+                <div class="status-box" id="timer-box">
+                    <img src="images/timer.png" alt="Timer" style="height:20px; vertical-align:middle; margin-right:6px" />
+                    <span id="timer-display">Time: 10s</span>
+                </div>
+            </div>
+            <hr />
+            <h3 id="question-text">Question goes here.</h3>
+            <div id="answer-buttons" class="answer-buttons"></div>
+            <div id="feedback" class="feedback"></div>
+            <div class="controls">
+                <button id="next-btn" class="next-btn">Next</button>
+                <button id="show-result-btn" class="show-result-btn">Stop Now & Show Result</button>
+            </div>
+        </div>
+        
+        <div class="result-container hidden" id="result-container">
+            <img id="result-image" src="" alt="Result indicator" style="width:120px; height:auto; margin-bottom: 20px;" />
+            <h2 id="final-score">Your Score: 4/4</h2>
+            <p id = "result-message" class="result-message">Great job! You are getting better every time.</p>
+            <button id="play-again-btn" class="start-btn">Play Again</button>
+            <button id="view-leaderboard-btn-result" class="start-btn">View Leaderboard</button>
+        </div>
+        
+        <div id="leaderboard-container" class="hidden">
+            <h2>Leaderboard</h2>
+            <table id="leaderboard-table" class="leaderboard-table-wrapper">
+              <thead>
+                    <tr> 
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Score</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                    </tr>
+                </thead>
+              <tbody></tbody>
+            </table>
+            <button id="close-leaderboard" class="start-btn">Close</button>
+          </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
