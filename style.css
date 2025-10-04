@@ -260,29 +260,38 @@ button:focus {
 }
 
 @media (max-width: 480px) {
-    .status-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 0;
-    }
-
-    .status-box {
-        margin-bottom: 10px;
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    .controls {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .next-btn,
-    .show-result-btn {
-        width: 100%;
-        padding: 12px;
-        font-size: 1.1rem;
-    }
+  .main-container,
+  .quiz-setup,
+  .quiz-container,
+  .result-container,
+  #leaderboard-container {
+    max-width: 98vw;
+    width: 100vw;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .quiz-setup,
+  .quiz-container,
+  .result-container,
+  #leaderboard-container {
+    padding: 14px 8px;
+  }
+  .status-bar,
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 6px 0;
+  }
+  .answer-buttons button,
+  .next-btn,
+  .show-result-btn,
+  #login-btn,
+  #close-leaderboard {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
 }
 
 .login-panel {
