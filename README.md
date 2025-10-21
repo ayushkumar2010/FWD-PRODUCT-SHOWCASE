@@ -17,7 +17,7 @@ instant feedback mechanisms.
 
 - ⚙️ 3 Difficulty Levels – Easy, Medium & Hard, each with 4 questions.
 
-- ⏰ Timer Functionality – 15-second countdown for each question.
+- ⏰ Timer Functionality – 10-second countdown for each question.
 
 - 💬 Instant Feedback – Explanations shown after each question submission or on timeout.
 
